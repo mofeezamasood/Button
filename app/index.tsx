@@ -37,14 +37,14 @@ export default function App() {
   };
 
   const handleStartPress = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    //Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     setGameStage('growing');
     setButtonPosition(getRandomPosition(buttonSize));
     //setClickMessage("click if true");
   };
 
   const handleButtonPress = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    //Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     Vibration.vibrate(50);
 
     const newCount = clickCount + 1;
@@ -71,7 +71,7 @@ export default function App() {
   };
 
   const handleFinalQuestionPress = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
+    //Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Heavy);
     Vibration.vibrate(100);
     setGameStage('conclusion');
     confettiRef.current?.start();
